@@ -4,12 +4,16 @@ Extracts contact details (first name, surname, email) from the headers of an
 email.  Takes as a command line argument a program to be run on the discovered
 contacts.  E.g. a script to add them to custom address book.
 
-E.g.  an example script add_vcard.sh is provided which takes the arguments
+E.g.  An example use is
+
+    fetch_friends.rb add_vcard.sh < myemail.eml
+
+where the example script add_vcard.sh is provided and takes the arguments
 
     add_vcard.sh <name> <surname> <email>
 
-and adds the contact to a vcard file.  Running fetch_friends.rb on an email
-(piped through STDIN) will result in
+and adds the contact to a vcard file.  Running the fetch_friends.rb command will
+result in
 
     0: Holly +++ Herndon +++ h.herndon@googlemail.com
     1: Johan +++ Surrballe Wieth +++ weith@iceage.sg
