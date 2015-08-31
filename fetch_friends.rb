@@ -6,7 +6,7 @@ require 'mail'
 if ARGV.length != 1 or
    ARGV[0] == '-h'
    ARGV[1] == '--help'
-    puts "Usage: email-get-address.rb <command>"
+    puts "Usage: fetch_friends.rb <command>"
     puts "Where"
     puts "    <command> is a command taking three arguments"
     puts ""
