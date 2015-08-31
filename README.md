@@ -11,11 +11,11 @@ E.g.  an example script add_vcard.sh is provided which takes the arguments
 and adds the contact to a vcard file.  Running fetch_friends.rb on an email
 (piped through STDIN) will result in
 
-   0: Holly +++ Herndon +++ h.herndon@googlemail.com
-   1: Johan +++ Surrballe Wieth +++ weith@iceage.sg
-   2: Cleo +++ Tucker +++ cleo@last.fm
-   3: Corin +++ Tucker +++ tucker@digmeout.com
-   Which to add? ('y[e]' all, 'n' none, or '1[e] 4[e] 5-7[e]', optional 'e' to edit)
+    0: Holly +++ Herndon +++ h.herndon@googlemail.com
+    1: Johan +++ Surrballe Wieth +++ weith@iceage.sg
+    2: Cleo +++ Tucker +++ cleo@last.fm
+    3: Corin +++ Tucker +++ tucker@digmeout.com
+    Which to add? ('y[e]' all, 'n' none, or '1[e] 4[e] 5-7[e]', optional 'e' to edit)
 
 The user can select which to add, optionally editing them.  E.g.
 
