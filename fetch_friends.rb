@@ -116,7 +116,6 @@ when 'YE'
     edits = (0..$addies.length-1).to_a
 when /^\s*([0-9]+(-[0-9]+)?e?\s+)*[0-9]+(-[0-9]+)?e?\s*$/i
     ans.split.each do |option|
-        puts "doing #{option}"
         if option =~ /^[0-9]+$/
             additions << option.to_i
         elsif option =~ /^([0-9]+)e$/i
