@@ -15,7 +15,7 @@ uid="$name-$surname-$(date +'%s')"
 
 echo "Adding $name $surname $email $uid"
 
-echo -e "BEGIN:VCARD\n\
+echo -e "\nBEGIN:VCARD\n\
 VERSION:3.0\n\
 UID:$uid\n\
 FN:$name $surname\n\
