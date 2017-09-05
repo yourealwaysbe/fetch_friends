@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-vcard_file=~/.config/mutt/contacts.vcf
+vcard_directory=~/.config/mutt/contacts.vcf
 
 if [[ ! $# -eq 3 ]]
 then
@@ -15,6 +15,11 @@ uid="$name-$surname-$(date +'%s')"
 
 echo "Adding $name $surname $email $uid"
 
+
+cd $vcard_directory
+
+vcard_file="$uid.vcf"
+
 echo -e "BEGIN:VCARD\n\
 VERSION:3.0\n\
 UID:$uid\n\
@@ -22,3 +27,5 @@ FN:$name $surname\n\
 N:$surname;$name\n\
 EMAIL:$email\n\
 END:VCARD" >> $vcard_file 
+
+git add $vcard_file
