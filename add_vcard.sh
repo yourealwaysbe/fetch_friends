@@ -28,4 +28,4 @@ N:$surname;$name\n\
 EMAIL:$email\n\
 END:VCARD" >> $vcard_file 
 
-git add $vcard_file
+# git add $vcard_file
