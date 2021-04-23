@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-vcard_directory=~/.config/mutt/contacts.vcf
+vcard_directory=~/.config/mutt/contacts/people
 
 if [[ ! $# -eq 3 ]]
 then

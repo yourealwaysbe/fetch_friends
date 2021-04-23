@@ -63,7 +63,7 @@ def guess_info_from_email(email)
 end
 
 
-m = Mail.new(STDIN.read.encode(Encoding::ASCII, {:invalid => :replace, :undef => :replace}))
+m = Mail.new(STDIN.read.encode(Encoding::ASCII, :invalid => :replace, :undef => :replace))
 
 $ADDRESS_FIELDS.each do |field|
     if not m.header[field]
