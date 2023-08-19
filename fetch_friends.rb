@@ -71,7 +71,7 @@ $ADDRESS_FIELDS.each do |field|
     end
 
     begin
-        m.header[field].address_list.addresses.each do |addy|
+        m.header[field].element.addresses.each do |addy|
             if addy.display_name =~ /^(#{$NAME_RE})\s+(#{$NAMES_RE})#{$GARBAGE_RE}$/i
                 add_entry($1, $2, addy.address)
             elsif addy.display_name =~ /^(#{$NAMES_RE}),\s+(#{$NAME_RE})#{$GARBAGE_RE}$/i
