@@ -2,7 +2,6 @@
 
 require 'mail'
 
-
 if ARGV.length != 1 or
    ARGV[0] == '-h'
    ARGV[1] == '--help'
@@ -71,7 +70,7 @@ $ADDRESS_FIELDS.each do |field|
     end
 
     begin
-        m.header[field].element.addresses.each do |addy|
+        m.header[field].addrs.each do |addy|
             if addy.display_name =~ /^(#{$NAME_RE})\s+(#{$NAMES_RE})#{$GARBAGE_RE}$/i
                 add_entry($1, $2, addy.address)
             elsif addy.display_name =~ /^(#{$NAMES_RE}),\s+(#{$NAME_RE})#{$GARBAGE_RE}$/i
@@ -107,22 +106,18 @@ edits = []
 
 case ans
 when 'Y'
-    puts "all"
     additions = (0..$addies.length-1).to_a
 when 'YE'
-    puts "all edit"
     edits = (0..$addies.length-1).to_a
 when /^\s*([0-9]+(-[0-9]+)?e?\s+)*[0-9]+(-[0-9]+)?e?\s*$/i
     ans.split.each do |option|
         if option =~ /^[0-9]+$/
             additions << option.to_i
         elsif option =~ /^([0-9]+)e$/i
-            puts "yeah"
             edits << $1.to_i
         elsif option =~ /^([0-9]+)-([0-9]+)$/
             additions.concat(($1.to_i..$2.to_i).to_a)
         elsif option =~ /^([0-9]+)-([0-9]+)e$/i
-            puts "oh"
             edits.concat(($1.to_i..$2.to_i).to_a)
         end
     end
