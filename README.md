@@ -31,7 +31,7 @@ called on all three, adding them to the vcard file.
 ## Requires 
 
 * [Ruby](https://www.ruby-lang.org/)
-* [Ruby Mail](https://rubygems.org/gems/mail/versions/2.6.3)
+* [Ruby Mail](https://rubygems.org/gems/mail/versions/2.8.0) 2.8.0 or above.
 
 ## Setup For Mutt
 
